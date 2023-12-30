@@ -17,3 +17,5 @@ def accuracy(y_true, y_prediction):
   y_true== y_prediction 
   return np.sum(y_true== y_prediction)/len(y_true)
 print('accuracy class:',accuracy(y_test,prediction))
+
+# LOGISTIC REGRESSION FROM SCRATCH
