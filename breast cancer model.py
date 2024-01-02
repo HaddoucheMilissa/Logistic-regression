@@ -30,7 +30,9 @@ class LogisticRegression:
   def fit(self,x,y):
      n_samples,n_features = x.shape #n_samples is the number of my datapoints
      self.weights=np.zeros(n_features)
-    #approximation
+    self.bias=0
+    for i in range(n_iters):
+      #approximation
      linear_model= np.dpt(x,self.weight)+self.bias
      y_pred=self.sig(linear_model)
 
@@ -49,6 +51,7 @@ class LogisticRegression:
     y_pred_cls=[1 if i>0.5 else 0 for i in y_pred]
     return np.array(y_pred_cls)
 
+  
 
   def sig(self,x):
     return 1/(1+np.exp(-x))
